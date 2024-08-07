@@ -42,11 +42,7 @@ fun CustomButton(
     onClick: () -> Unit
 ) {
     val isStandardStyle = style == CustomButtonStyle.STANDARD
-    val btnIcon = if(isStandardStyle) {
-        ImageVector.vectorResource(id = icon)
-    } else {
-        ImageVector.vectorResource(id = R.drawable.google_ic)
-    }
+    val btnIcon = if(isStandardStyle) icon else R.drawable.google_ic
     val bgColor = if(isStandardStyle) Color.Transparent else Color.White
     Button(
         modifier = Modifier
@@ -67,11 +63,15 @@ fun CustomButton(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Icon(
-                imageVector = btnIcon,
-                contentDescription = null,
-                tint = Color.Unspecified
-            )
+            if(icon != 0) {
+                Icon(
+                    imageVector = ImageVector.vectorResource(id = btnIcon),
+                    contentDescription = null,
+                    tint = Color.Unspecified
+                )
+            } else {
+                Spacer(modifier = Modifier)
+            }
             Text(
                 modifier = Modifier,
                 text = stringResource(id = text),

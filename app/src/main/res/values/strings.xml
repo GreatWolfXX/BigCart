@@ -6,4 +6,10 @@
     <string name="login">Login</string>
     <string name="create_account_title">Create an account</string>
     <string name="continue_google_title">Continue with google</string>
+    <string name="welcome_to_title">Welcome to</string>
+    <string name="buy_quality_title">Buy Quality Dairy Products</string>
+    <string name="buy_premium_title">Buy Premium Quality Fruits</string>
+    <string name="get_discounts_title">Get Discounts On All Products</string>
+    <string name="onboarding_mock_desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</string>
+    <string name="get_started">Get started</string>
 </resources>
